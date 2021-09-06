@@ -5,7 +5,7 @@ Serilog é uma solução de logging que se destaca por ser open source, popular,
 Os Logs podem ser direcionados para console, arquivos, bases de dados (Relacionais/NoSQL) ou soluções Clound.
 
 # Este projeto contém:
-- Logs direcionados para console, arquivo TXT e SQLServer;
+- Logs direcionados para console, arquivo TXT e SQL Server;
 
 # Como executar:
 - Clonar / baixar o repositório em seu workplace.
