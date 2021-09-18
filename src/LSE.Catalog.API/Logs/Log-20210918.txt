@@ -1,0 +1,135 @@
+2021-09-18 19:43:13.618 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2021-09-18 19:43:13.658 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (40ms).
+2021-09-18 19:43:13.667 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-09-18 19:43:13.723 -03:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-09-18 19:43:13.731 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2021-09-18 19:43:13.732 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2021-09-18 19:43:13.733 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-09-18 19:43:13.797 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-09-18 19:43:18.978 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-09-18 19:43:18.981 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2021-09-18 19:43:18.987 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:43:19.008 -03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:43:19.043 -03:00 [DBG] A data reader was disposed.
+2021-09-18 19:48:39.362 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-09-18 19:48:39.362 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2021-09-18 19:48:39.362 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:48:39.367 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:48:39.367 -03:00 [DBG] A data reader was disposed.
+2021-09-18 19:48:45.433 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-09-18 19:48:45.433 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2021-09-18 19:48:45.433 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:48:45.437 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:48:45.437 -03:00 [DBG] A data reader was disposed.
+2021-09-18 19:49:22.572 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-09-18 19:49:22.572 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2021-09-18 19:49:22.576 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE ([p].[Status] = 0) AND ([p].[Id] = @__id_0)
+2021-09-18 19:49:22.588 -03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE ([p].[Status] = 0) AND ([p].[Id] = @__id_0)
+2021-09-18 19:49:22.635 -03:00 [DBG] A data reader was disposed.
+2021-09-18 19:49:58.947 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2021-09-18 19:49:58.976 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (26ms).
+2021-09-18 19:49:58.983 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-09-18 19:49:59.035 -03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-09-18 19:49:59.043 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2021-09-18 19:49:59.043 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2021-09-18 19:49:59.044 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-09-18 19:49:59.131 -03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-09-18 19:50:27.131 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-09-18 19:50:27.132 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2021-09-18 19:50:27.134 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:50:27.149 -03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[DateCreateAt], [p].[DateDeleteAt], [p].[Description], [p].[Price], [p].[Quantity], [p].[Status], [p].[Title]
+FROM [Products] AS [p]
+WHERE [p].[Status] = 0
+2021-09-18 19:50:27.164 -03:00 [DBG] A data reader was disposed.
